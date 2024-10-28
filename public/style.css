@@ -416,12 +416,21 @@ form input, form textarea{
     background-position: center;
 }
 
+main{
+    background-color: var(--black);
+}
+
 /*-----------about-----------*/
+
+#about{
+    padding: 60px 0;
+    color: darkgoldenrod;
+}
 
 .row{
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
-    flex-wrap:  wrap;
 }
 
 .about-col-1{
@@ -429,9 +438,9 @@ form input, form textarea{
 }
 
 .about-col-1 img{
-    width: 100%;
+    width: 50%;
     border-radius: 15%;
-    
+    display: none;
 }
 
 .about-col-2{
@@ -439,7 +448,11 @@ form input, form textarea{
     color: gainsboro;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.about-col-3 img{
+    width: 25%;
+    border-radius: 15%;
 
+}
 .sub-title{
     font-size: 60px;
     font-weight: 400;
@@ -493,6 +506,43 @@ form input, form textarea{
 }
 
 /*---------------services----------------*/
+
+
+/* -------------------contact */
+.contact-text p{
+    color: var(--white);
+    margin-top: 1rem;
+
+}
+.social-CV{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin: .5rem;
+    color: var(--white);
+    display: inline-block;
+    transition: transform 01s;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 50%;
+    border: 0;
+    outline: none;
+    background: var(--white);
+    padding: 15px;
+    margin: 15px 0;
+    color: var(--black);
+    font-size: 18px;
+    border-radius: 6px;
+}
 
 
 }
