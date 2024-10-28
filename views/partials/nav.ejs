@@ -1,0 +1,57 @@
+<nav class="nav-bar">
+    
+    <ul>
+        <li class="hideOnMobile"><% if(isAdmin) { %>
+            <a href="/logout" class="button-logout">Logout</a>
+            <h1 class="welcome-sign">Hola Balam!</h1>
+            <% } else { %> 
+                <a href="/login">Login</a> 
+            <% } %>  
+        </li>  
+        <li class="hideOnMobile"><a href="/">Home</a></li>
+        <li class="hideOnMobile"><a href="/">About me</a></li>
+        <li class="hideOnMobile"><a href="/">Services</a></li>
+        <li><a href="/portfolio">See portfolio</a></li>
+        <% if(isAdmin) { %>
+        <li class="hideOnMobile"><a href="/admin/new-photo">Add Photos</a></li>
+        <% } else { %>
+        <li class="hideOnMobile"><a href="/">Contact</a></li>   
+        <% } %>   
+        <li style="font-weight: 300;">en | es</li> 
+        <li onclick=showSidebar() ><a href="#"><svg id="dots" width="75px" height="75px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="miter"><line x1="5.99" y1="12" x2="6" y2="12" stroke-linecap="round" stroke-width="2"></line><line x1="11.99" y1="12" x2="12" y2="12" stroke-linecap="round" stroke-width="2"></line><line x1="17.99" y1="12" x2="18" y2="12" stroke-linecap="round" stroke-width="2"></line></svg></a></li> 
+    </ul>
+    <!-- ----------------------------vertical nav -->
+    <ul class="sidebar transform">
+        <li onclick=hideSidebar() ><a href="#"><svg id="dots" width="100px" height="100px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000000" stroke-width="1" stroke-linecap="round" stroke-linejoin="miter"><line x1="5.99" y1="12" x2="6" y2="12" stroke-linecap="round" stroke-width="2"></line><line x1="11.99" y1="12" x2="12" y2="12" stroke-linecap="round" stroke-width="2"></line><line x1="17.99" y1="12" x2="18" y2="12" stroke-linecap="round" stroke-width="2"></line></svg></a></li> 
+        <li><a href="/">Home</a></li>
+        <li><a href="/">About me</a></li>
+        <li><a href="/">Services</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <% if(isAdmin) { %>
+        <li><a href="/admin/new-photo">Add Photos</a></li>
+        <% } else { %>
+        <li><a href="/">Contact</a></li>   
+        <% } %>
+        <li><% if(isAdmin) { %>
+            <a href="/logout" class="button-logout">Logout</a>
+            <h1 class="welcome-sign">Hola Balam!</h1>
+            <% } else { %> 
+                <a href="/login">Login</a> 
+            <% } %>  
+        </li>
+
+    </ul>
+</nav>
+
+<script>
+    function showSidebar(){
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'flex'
+        sidebar.classList.add('active')
+    };
+
+    function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'none'
+    };
+</script>
