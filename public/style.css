@@ -1,6 +1,7 @@
 :root {
     --black: #101720;
-    --white: rgb(247,252,254)
+    --white: rgb(247,252,254);
+    --whiteGray: rgb(220,221,221)
 }
 /* ---------------------general style*/
 *{
@@ -9,6 +10,7 @@
     text-decoration: none;
 }
 body {
+    margin-top: 50px;
     font-family:'Poppins', sans-serif;
     width: 100%;
 }
@@ -34,9 +36,12 @@ h2{
 /* ---------------------nav */
 
 nav {
-    height: fit-content;
+    height: 50px;
     background-color: var(--white);
     box-shadow:  3px 3px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 nav ul{
     width: 100%;
@@ -100,14 +105,15 @@ nav li:first-child{
     .hideOnMobile{
         display:none
     }
+    .about-col-3 img{
+        display: none;
+    }
 }
 /* -----------------------------------------main style */
 main{
     background-color: var(--white);
 }
-.section{
-    margin:0 1rem 0 1rem;
-}
+
 
 #logo{
     margin: 1rem 0 0 1rem;
@@ -121,21 +127,26 @@ main{
 /* --------------------------------------about mobile */
 #about{
     color: darkgoldenrod;
+    background-color: var(--whiteGray);
+    padding: 1rem;
 }
 
 .row{
     display: flex;
     justify-content: space-between;
     flex-wrap:  wrap;
-}
 
+}
+.row h1{
+    color: var(--black);
+}
 .about-col-1{
-    flex-basis: 35%;
+    margin-top: 1rem;
+    flex-basis: 60%;
 }
 
 .about-col-1 img{
-    width: 100%;
-    border-radius: 15%;
+    width: 150%;
 }
 
 .about-col-2{
@@ -196,9 +207,11 @@ main{
 
 /* -----------------------my services mobile */
 #services{
+    margin:0 1rem 0 1rem;
     padding: 30px 0;
-    color: gainsboro
+    color: var(--white)
 }
+
 
 .services-list{
     display: grid;
@@ -256,7 +269,10 @@ main{
 
 /* --------------------------------my work .hideOnMobile */
 #portfolio{
-    padding: 50px 0;
+    background-color: var(--whiteGray);
+}
+#portfolio h1{
+    padding: 1rem 0 0 1rem;
 }
 .work-list{
     display: grid;
@@ -265,6 +281,7 @@ main{
     margin-top: 50px;
 }
 .work{
+    margin:0 1rem 0 1rem;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -333,6 +350,9 @@ main{
 }
 
 /* ----------------------------contact */
+#contact {
+    margin:0 1rem 0 1rem;
+}
 .contact-form{
     flex-basis: 80%;
 }
@@ -424,39 +444,44 @@ main{
 
 #about{
     padding: 60px 0;
-    color: darkgoldenrod;
+    background-color: var(--white);
+    padding: 1rem;
 }
 
 .row{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-}
-
-.about-col-1{
-    flex-basis: 35%;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr 0.1fr;
+    grid-template-rows: auto
 }
 
 .about-col-1 img{
-    width: 50%;
+    width: 100%;
     border-radius: 15%;
     display: none;
 }
 
+#about h1{
+    grid-column: 1/4;
+    grid-row: 1/2
+    
+}
+
 .about-col-2{
-    flex-basis: 60%;
-    color: gainsboro;
+    margin-left: 1rem;
+    color: var(--black);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    grid-column: 2/4;
 }
 .about-col-3 img{
-    width: 25%;
-    border-radius: 15%;
-
+    width: 350px;
+    max-width: 110%;
+    grid-column: 1/2;
+    grid-row: 2/3;
 }
 .sub-title{
     font-size: 60px;
     font-weight: 400;
-    color: gainsboro;
+    color: var(--black);
 }
 
 .tab-titles{
@@ -507,8 +532,25 @@ main{
 
 /*---------------services----------------*/
 
+#services h1{
+    color: var(--white);
+}
+.services-list div{
+    border: solid 2px var(--whiteGray);
+}
+.services-list div:hover{
+    border: none;
+}
+
+/* ---------------------portfolio */
+#portfolio{
+    padding: 1rem 0 3rem 0;
+}
 
 /* -------------------contact */
+#contact{
+    padding: 1rem 0 0 0;
+}
 .contact-text p{
     color: var(--white);
     margin-top: 1rem;
