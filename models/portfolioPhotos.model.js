@@ -14,15 +14,23 @@ const photoSchema = new Schema ({
         required: false,
         unique: false
     },
-    url: {
+    photo: {
         type: [String],
         min: 1,
         required: true
     },
     category: {
         type: [String],
-        enum: ['portrait', 'urban', 'landscape', 'sports', 'nature', 'other'],
+        enum: ['portrait', 'urban', 'landscape', 'sports', 'nature', 'culture', 'other'],
         unique: false
+    },
+    locationCountry: {
+        type: String,
+        required: true
+    },
+    locationCity: {
+        type: String,
+        required: false
     },
     coordinates: {
         type: {

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>🐆-Balam Castro</title>
+        <%- include('./partials/head.ejs') %>
+    </head>
+<body>
+    <div id="portfolio-header">
+        <nav id="portfolio-nav-bar">
+            <ul>
+                <li><% if(isAdmin) { %>
+                    <a href="/logout" class="button-logout">Logout</a>
+                    <!-- <h1 class="welcome-sign">Hola Balam!</h1> -->
+                    <% } else { %>
+                        <a href="/login">Login</a>
+                    <% } %>
+                </li>
+                <li><a href="/">Go home...</a></li>
+                <% if(isAdmin) { %>
+                <li class="hideOnMobile"><a href="/admin/new-photo">Add Photos</a></li>
+                <% } %>
+            </ul>
+        </nav>
+    </div>
+<main>
+    <div class="gallery">
+        <% for (const p of photos) { %>
+            <!-- <a href="/portfolio/< %= p.id %>"></a>-->
+             <article class="photo-article">
+                <div class="photo-frame">
+                    <img src="<%= p.photo %>" class="photo" alt="">
+                </div>
+                <div class="photo-info">
+                    <h3 class="photo-title"><%= p.title %></h3>
+                    <!-- <h4 class="photo-description"><%= p.description %></h4> -->
+                    <!-- <h4 class="photo-date"><%= p.date %></h4> -->
+                    <!-- <h4 class="photo-location"><%= p.locationCountry %>, <%= p.locationCity %></h4> -->
+                </div>
+             </article>
+        <% } %>
+    </div>
+</main>
+</body>
+</html>

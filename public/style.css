@@ -50,9 +50,7 @@ nav ul{
     justify-content: flex-end;
     align-items: center;
 }
-nav li{
-    font-weight: 600;
-}
+
 nav a{
     height: 50px;
     padding: 0 30px;
@@ -551,6 +549,10 @@ main{
 #contact{
     padding: 1rem 0 0 0;
 }
+#contact h1{
+    color: var(--white);
+}
+
 .contact-text p{
     color: var(--white);
     margin-top: 1rem;
@@ -586,5 +588,10 @@ form input, form textarea{
     border-radius: 6px;
 }
 
-
+.contact-form{
+    width: 150%;
+    justify-items: stretch;
+    margin-left: 1rem ;
+    grid-column: 2/4;
+}
 }
