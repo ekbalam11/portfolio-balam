@@ -40,7 +40,9 @@ const postNewPhoto = async(req, res) => {
         date: req.body.date,
         url: req.body.url,
         category: req.body.category,
-        coordinates: coordinates
+        coordinates: coordinates,
+        locationCountry: req.body.locationCountry,
+        locationCity: req.body.locationCity
     })
     res.send('Foto creada <a href="/portfolio"><button type= "submit"> Ir al Portfolio </button></a> <a href="/admin/new-photo"><button type= "submit"> Subir otra foto </button></a>'
     )
