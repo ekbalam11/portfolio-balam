@@ -1,145 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>🐆-Balam Castro</title>
     <%- include('./partials/head.ejs') %>
 </head>
+
 <body>
     <div id="header">
         <%- include('./partials/nav.ejs') %>
-        <div>
-            <a href="/"><img src="/img/logo_bold.png" id="logo" alt ="logo"></a>
-        </div>
-        <div class="header-text">
-            <h1 id="balam">Balam</h1>
-            <span>Mexican | Geographer | Photographer</span>
-        </div>
-    </div>
-<main>
-    <!-----------------about me------------------>
-<div class="section" id="about">
-    <div class="container">
-        <div class="row">
-            <h1 class="sub-title">About Me</h1>
-            <div class="about-col-1">
-                <img src="img/balam_nobackground.png" alt="">
-            </div>
-            <div class="about-col-3">
-                <img src="img/balam-evora.jpg" alt="">
-            </div>
-            <div class="about-col-2">
-                <p>Geographer since 2014. Specialized in natural resource management, 
-                    sustainable territorial planning, and particularly focused on geospatial 
-                    technologies for cartographic design and production. Wide experience as 
-                    spatial analyst with GIS and remote sensing tools. Notable for incorporating 
-                    design and data visualization tools to produce more appealing and useful 
-                    information for the different users. Also experienced in planning and 
-                    executing fieldwork in rural and urban contexts. </p>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>GIS</span><br>Spatial Analysis</li>
-                            <li><span>Cartography</span><br>Design and production</li>
-                            <li><span>Data Viz</span><br>DB Management <br>Graphic design</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>2018-2019</span><br>GIS Analyst</li>
-                            <li><span>2019-2020</span><br>Research Project coordinator</li>
-                            <li><span>2019-2021</span><br>Associate professor</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>2010-2014</span><br>BS Geography</li>
-                            <li><span>2017-2019</span><br>MSc Sustainability Science</li>
-                        </ul>
-                    </div>
+            <div class="slogan">
+                <!-- <a href="/"><img src="/img/logo_bold.png" id="logo" alt ="logo"></a> -->
+                <div class="header-text">
+                    <h1 id="balam">Balam</h1>
+                    <span>Mexican | Geographer | Photographer</span>
+                </div>
             </div>
 
-        </div>
     </div>
-</div>
-<!--------------------services-------------------->
-<div class="section" id="services">
-    <div class="container">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-solid fa-earth-americas"></i>
-                <h2>Maps, maps and more maps</h2>
-                <p>Cartographic design and production for all your needs.
-                    Scientific inputs with aesthetic results <br><br>
-                <p class="cita">"La cartografía es la más artística de las ciencias y la más científica
-                    de las artes"
-                    <a href="#">learn more</a>
+    <main>
+        <!-----------------about me------------------>
+        <div class="section" id="about">
+            <div class="container">
+                <div class="row">
+                    <h1 class="sub-title">About Me</h1>
+                    <div class="about-col-1">
+                        <img src="img/balam_nobackground.png" alt="">
+                    </div>
+                    <div class="about-col-3">
+                        <img src="img/balam-evora.jpg" alt="">
+                    </div>
+                    <div class="about-col-2">
+                        <p>Geeking out over maps and data since 2014, mainly focusing on sustainable resource management
+                            and territorial planning. I'm a big fan of geospatial technologies, especially GIS and
+                            remote sensing, and love using them to create maps and many others visualizations. Whether
+                            it's analyzing satellite imagery or doing fieldwork, I'm always excited to explore new ways
+                            to use Geography to make a positive impact in both people and nature. In the recent years I
+                            felt in love with photography and now I hae my camera always ready. </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>GIS + Cartography</span><br>
+                                    Spatial Analysis <br>
+                                    Maps design and production</li>
+                                <li><span>Data Viz</span><br>
+                                    DB Management <br>
+                                    Graphic design</li>
+                                <li><span>Coding</span><br>
+                                    Full-stack web development <br>
+                                    <a href="https://github.com/ekbalam11">Check out my github profile for more
+                                        info!</a>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2018-2019</span><br>GIS Analyst <br>
+                                    CentroGEO, Mexico City</li>
+                                <li><span>2019-2020</span><br>Research Project Coordinator <br>
+                                    University of British Columbia and UNAM, Mexico City</li>
+                                <li><span>2019-2021</span><br>Associate professor <br>
+                                    UNAM, Mexico City</li>
+                                <li><span>2022-2023</span><br>Content Moderator for Facebook <br>
+                                    Barcelona</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2010-2014</span><br>BS Geography <br>
+                                    UNAM, Mexico City</li>
+                                <li><span>2017-2019</span><br>MSc Sustainability Science <br>
+                                    UNAM, Mexico City</li>
+                                <li><span>2024</span><br>Full-stack web development bootcamp <br>
+                                    Ironhack, Barcelona</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            <div>
+        </div>
+        <!--------------------services-------------------->
+        <div class="section" id="services">
+            <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-solid fa-earth-americas"></i>
+                        <h2>Maps, maps and more maps</h2>
+                        <p>Cartographic design and production for all your needs.
+                            Scientific inputs with aesthetic results <br><br>
+                        <p class="cita">"La cartografía es la más artística de las ciencias y la más científica
+                            de las artes"
+                            <a href="#">learn more</a>
+                    </div>
+                    <!-- <div>
                 <i class="fa-solid fa-code"></i>
                 <h2>Web Development</h2>
 
                     <a href="#" >learn more</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-magnifying-glass-chart"></i>
-                <h2>Data Visualization</h2>
+            </div> -->
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        <h2>Data Visualization</h2>
 
-                    <a href="#">learn more</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-images"></i>
-                <h2>Photography</h2>
+                        <a href="#">learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-images"></i>
+                        <h2>Photography</h2>
+                        <p>From boxing championships to catalan Correfoc or mexican Son Jarocho. Just my life through a
+                            lens. <br><br>
+                        <p class="cita">"Si tienes una historia para contar, vas a tomar buenas fotografías"
 
-                    <a href="/portfolio" >learn more</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!---------------------------portfolio---------------->
-
-<div class="section" id="portfolio">
-    <div class="wrap">
-        <h1 class="sub-title">Portfolio</h1>
-        <div class="work-list">
-            <div class="work">
-                <img src="img\laguna.png" alt="Aquí va una imagen">
-                <div class="layer">
-                    <h3>Geography</h3>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="img\michi.png" alt="Aquí va una imagen">
-                <div class="layer">
-                <h3>Code</h3>
-                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="img\roboto.png" alt="Aquí va una imagen">
-                <div class="layer">
-                <h3>Data</h3>
-                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="img\flor.png" alt="Aquí va una imagen">
-                <div class="layer">
-                    <h3>Photography</h3>
-                    <a href="/portfolio"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a href="/portfolio">Discover more</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<!------------------ maps ----------------->
-<!-- <div class="section" id="map">
+
+        <!---------------------------portfolio---------------->
+
+        <div class="section" id="portfolio">
+            <div class="wrap">
+                <h1 class="sub-title">Portfolio</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="img\laguna.png" alt="Aquí va una imagen">
+                        <div class="layer">
+                            <h3>Geography</h3>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="img\michi.png" alt="Aquí va una imagen">
+                        <div class="layer">
+                            <h3>Code</h3>
+                            <a href="https://github.com/ekbalam11/"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="img\roboto.png" alt="Aquí va una imagen">
+                        <div class="layer">
+                            <h3>Data</h3>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="img\flor.png" alt="Aquí va una imagen">
+                        <div class="layer">
+                            <h3>Photography</h3>
+                            <a href="/portfolio"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------------------ maps ----------------->
+        <!-- <div class="section" id="map">
     <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=2.180120944976807%2C41.42314791802191%2C2.201299667358399%2C41.442838972931746&amp;layer=mapnik&amp;marker=41.43299419211502%2C2.1907103061676025" style="border: 1px solid black"></iframe><br/><small>
         <span class="btn">
             <a id="map-text" href="https://www.openstreetmap.org/?mlat=41.4330&amp;mlon=2.1907#map=16/41.4330/2.1907">Ver el mapa más grande</a></small>
@@ -149,54 +171,58 @@
 
 
 
-<!---------------contact--------------->
-<div class="section" id= "contact" >
-    <div class="container">
-        <div class="row">
-            <div class="contact-text">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-regular fa-comments"></i>ekbalam11@gmail.com</p>
-                <p><i class="fa-solid fa-mobile-screen"></i>(+34)666140628</p>
-                <div class="social-CV">
-                    <button type="submit" class="btn">Download CV</button>
-                    <div class="social-icons">
-                        <a href="https://github.com/ekbalam11/"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/balamcastro/"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/balam_castro/"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://twitter.com/Balam_CT"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="https://www.researchgate.net/profile/Balam-Castro"><i class="fa-brands fa-researchgate"></i></a>
+        <!---------------contact--------------->
+        <div class="section" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-text">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-regular fa-comments"></i>ekbalam11@gmail.com</p>
+                        <p><i class="fa-solid fa-mobile-screen"></i>(+34)666140628</p>
+                        <div class="social-CV">
+                            <button type="submit" class="btn">Download CV</button>
+                            <div class="social-icons">
+                                <a href="https://github.com/ekbalam11/"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/balamcastro/"><i
+                                        class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/balam_castro/"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                                <a href="https://twitter.com/Balam_CT"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="https://www.researchgate.net/profile/Balam-Castro"><i
+                                        class="fa-brands fa-researchgate"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form action="/new-message" method="POST">
+                            <input type="text" name="name" id="name" placeholder="Your Name" required>
+                            <input type="email" id="email" name="email" placeholder="Your email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" required>
+                            <textarea name="message" id="message" rows="6" placeholder="Your Message" required></textarea>
+                            <button type="submit" class="btn">Send your message</button>
+                        </form>
                     </div>
                 </div>
             </div>
-            <div class="contact-form">
-                <form>
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn">Send your message</button>
-                </form>
-            </div>
         </div>
-    </div>
-</div>
-<footer class="copyright">
-    <p>Copyright © Balam Castro. Website made by me <i class="fa-solid fa-feather"></i>   </p>
-</footer>
-</main>
-<script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-    
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
+        <footer class="copyright">
+            <p>Copyright © Balam Castro. Website made by me <i class="fa-solid fa-feather"></i> </p>
+        </footer>
+    </main>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
         }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-</script>
+    </script>
 </body>
+
 </html>
