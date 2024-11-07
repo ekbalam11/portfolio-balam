@@ -10,13 +10,13 @@
                     <% } %>
         </li>
         <li class="hideOnMobile"><a href="/">Home</a></li>
-        <li class="hideOnMobile"><a href="/">About me</a></li>
+        <li class="hideOnMobile"><a href="#">About me</a></li>
         <li class="hideOnMobile"><a href="/">Services</a></li>
         <li><a href="/portfolio">See portfolio</a></li>
         <% if(isAdmin) { %>
             <li class="hideOnMobile"><a href="/admin/new-photo">Add Photos</a></li>
             <% } else { %>
-                <li class="hideOnMobile"><a href="/">Contact</a></li>
+                <li class="hideOnMobile"><a href="#contact">Contact</a></li>
                 <% } %>
                     <!-- <li style="font-weight: 300;">en | es</li>  -->
                     <li onclick=showSidebar()><a href="#"><svg id="dots" width="75px" height="75px" viewBox="0 0 24 24"
@@ -37,13 +37,13 @@
                     <line x1="17.99" y1="12" x2="18" y2="12" stroke-linecap="round" stroke-width="2"></line>
                 </svg></a></li>
         <li><a href="/">Home</a></li>
-        <li><a href="/">About me</a></li>
-        <li><a href="/">Services</a></li>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#services">Services</a></li>
         <li><a href="/portfolio">Portfolio</a></li>
         <% if(isAdmin) { %>
             <li><a href="/admin/new-photo">Add Photos</a></li>
             <% } else { %>
-                <li><a href="/">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <% } %>
                     <li>
                         <% if(isAdmin) { %>
@@ -68,4 +68,18 @@
         const sidebar = document.querySelector('.sidebar');
         sidebar.style.display = 'none'
     };
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth'
+            });
+        });
+    });
 </script>

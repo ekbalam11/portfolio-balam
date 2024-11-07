@@ -7,3 +7,5 @@
 
 # Pendientes:
 -Cambiar el modelo de "photo" por "url"
+-crear correo sólo para esto
+-cambiar data vis y juntar con mapas y poner "trayectoria académica" en su lugar para incluir artículos, congresos, etc... 

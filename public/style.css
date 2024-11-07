@@ -41,6 +41,7 @@ nav {
     box-shadow:  3px 3px 5px rgba(0,0,0,0.1);
     position: fixed;
     top: 0;
+    z-index: 999;
     width: 100%;
 }
 nav ul{
@@ -95,6 +96,9 @@ nav li:first-child{
 }
 .transform-active{
     background-color: #101720;
+}
+div .section{
+    scroll-margin-top: 80px;
 }
 
 
