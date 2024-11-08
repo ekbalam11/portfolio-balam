@@ -121,7 +121,14 @@ main{
     max-width: 100px;
 }
 .header-text{
-    margin-left: 2rem;
+    margin: 2rem 0 0 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header-text span{
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 /* --------------------------------------about mobile */
@@ -459,7 +466,7 @@ form input, form textarea{
 }
 
 #balam{
-    font-size: 4rem;
+    font-size: 6rem;
     color: darkcyan;
     font-weight: 800;
 }

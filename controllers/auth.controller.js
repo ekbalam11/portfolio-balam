@@ -1,5 +1,6 @@
-const USERNAME = "admin";
-const PASSWORD = "admin";
+const USER = process.env.USER;
+const PASSWORD = process.env.PASSWORD;
+
 
 const getLoginForm = (req, res) => {
     res.send(` 
@@ -11,14 +12,10 @@ const getLoginForm = (req, res) => {
 }
 
 const postLoginForm = (req, res) => {
+
     const { username, password } = req.body;
 
-    //To do: CRear un modelo de Users. Crear un Schema que guarde los usuarios de tipo administrador en tu base de datos de MongoDB (username, password).
-
-    //To do+: Crear una página para registrar nuevos usuarios administradores
-
-    //Si el usuario y contraseña coinciden con el de nuestra "base de datos", entonces nos guardaremos la información de que el cliente está autentificado.
-    if (username === USERNAME && password === PASSWORD) {
+    if (username === USER && password === PASSWORD) {
         req.session.isAuthenticated = true; //Falta agregar validación REGEX
         res.locals.isAdmin = true;
 
