@@ -14,8 +14,8 @@
         </div>
     </header>
     <!-- <button id="upload_widget" class="cloudinary-button">Subir fotos</button> -->
-    <div class="container">
-        <form action="/admin/new-photo" method="POST">
+    <div style="background-color: cadetblue;" class="container">
+        <form class="new-photo-form" action="/admin/new-photo" method="POST">
             <label for="title">Título de la foto</label>
             <input type="text" id="id" value="" hidden>  
             <input type="text" name="title" id="title" value="" required>
@@ -25,7 +25,7 @@
             <input type="date" id="date" name="date">
             <div class="photo-upload">
                 <label for="photo">URL</label>
-                <input type="url" name="photo" id="photo" placeholder="URL"></input>
+                <input type="url" name="url" id="url" placeholder="URL"></input>
                 <!-- <label for="photo">Sube una o varias foto para tu anuncio</label> -->
                 <!-- <input type="file" id="photo" name="photo" accept=".jpg, .jpeg, .png, .gif, .pdf, WebP" multiple>
                 <button id="upload_widget" class="cloudinary-button">Cargar foto</button> -->

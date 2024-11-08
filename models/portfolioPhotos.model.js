@@ -14,7 +14,7 @@ const photoSchema = new Schema ({
         required: false,
         unique: false
     },
-    photo: {
+    url: {
         type: [String],
         min: 1,
         required: true

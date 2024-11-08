@@ -97,9 +97,7 @@ nav li:first-child{
 .transform-active{
     background-color: #101720;
 }
-div .section{
-    scroll-margin-top: 80px;
-}
+
 
 
 /* ---------------------------hide in mobile */
@@ -131,6 +129,8 @@ main{
     color: darkgoldenrod;
     background-color: var(--whiteGray);
     padding: 1rem;
+    scroll-margin-top: 50px;
+    -webkit-scroll-margin-top: 50px;
 }
 
 .row{
@@ -421,6 +421,26 @@ form input, form textarea{
 }
 
 
+/* -----------new photo */
+.new-photo-form{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding: 5%;
+}
+.new-photo-form .checkboxes{
+    display: flex;
+    flex-direction:row;
+    gap: .5rem;
+}
+.photo-upload #photo{
+    width: 200%;
+}
+.location{
+    display: flex;
+    flex-direction: column;
+    width: 150%;
+}
 
 /* ---------------------------.media query laptop */
 @media screen 
