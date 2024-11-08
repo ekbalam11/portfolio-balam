@@ -22,6 +22,7 @@ const getNewPhotoForm = async (req, res) => {
 
 const postNewPhoto = async(req, res) => {
     const { id, latitude, longitude } = req.body;
+    console.log("🚀 ~ postNewPhoto ~ req.body:", req.body)
     if(id) {
         await Photo.findByIdAndUpdate(id, req.body);
         res.send('Foto modificada');

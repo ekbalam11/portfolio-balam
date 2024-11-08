@@ -8,7 +8,7 @@ const getLoginForm = (req, res) => {
             <input type="username" name= "username" placeholder= "Usuario" requires />
             <input type="password" name= "password" placeholder= "Contraseña" required />
             <button type= "submit"> Iniciar sesión </button>
-        `); //sustituir por un login.ejs 
+        `); 
 }
 
 const postLoginForm = (req, res) => {

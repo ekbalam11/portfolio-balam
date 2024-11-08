@@ -28,10 +28,10 @@
             <!-- <a href="/portfolio/< %= p.id %>"></a>-->
              <article class="photo-article">
                 <div class="photo-frame">
-                    <img src="<%= p.photo %>" class="photo" alt="">
+                    <img src="<%= p.url %>" class="photo" alt="">
                 </div>
                 <div class="photo-info">
-                    <h3 class="photo-title"><%= p.title %></h3>
+                    <!-- <h3 class="photo-title"><%= p.title %></h3> -->
                     <!-- <h4 class="photo-description"><%= p.description %></h4> -->
                     <!-- <h4 class="photo-date"><%= p.date %></h4> -->
                     <!-- <h4 class="photo-location"><%= p.locationCountry %>, <%= p.locationCity %></h4> -->
@@ -40,5 +40,23 @@
         <% } %>
     </div>
 </main>
+<script>
+    const image = document.querySelector('.popup-image');
+const popupContainer = document.createElement('div');
+const popupImage = document.createElement('img');
+
+popupContainer.classList.add('popup-container');
+popupImage.classList.add('popup-image-full');
+
+image.addEventListener('click', () => {
+  popupImage.src = image.src;
+  popupContainer.appendChild(popupImage);
+  document.body.appendChild(popupContainer);
+
+  popupContainer.addEventListener('click', () => {
+    popupContainer.remove();
+  });
+});
+</script>
 </body>
 </html>
