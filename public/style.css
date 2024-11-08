@@ -121,14 +121,7 @@ main{
     max-width: 100px;
 }
 .header-text{
-    margin: 2rem 0 0 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.header-text span{
-    font-size: 1rem;
-    font-weight: 600;
+    margin: 1rem 0 0 1rem;
 }
 
 /* --------------------------------------about mobile */
@@ -478,7 +471,15 @@ form input, form textarea{
 main{
     background-color: var(--black);
 }
-
+.header-text{
+    margin: 2rem 0 0 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header-text span{
+    font-size: 1rem;
+}
 /*-----------about-----------*/
 
 #about{
@@ -590,7 +591,6 @@ main{
 #portfolio{
     padding: 1rem 0 3rem 0;
 }
-
 
 /* -------------------contact */
 #contact{
