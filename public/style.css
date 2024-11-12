@@ -433,7 +433,7 @@ form input, form textarea{
     flex-direction:row;
     gap: .5rem;
 }
-.photo-upload #photo{
+.photo-upload #url{
     width: 200%;
 }
 .location{
@@ -441,6 +441,8 @@ form input, form textarea{
     flex-direction: column;
     width: 150%;
 }
+
+
 
 /* ---------------------------.media query laptop */
 @media screen 

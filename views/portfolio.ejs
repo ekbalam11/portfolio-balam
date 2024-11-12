@@ -17,7 +17,7 @@
                 </li>
                 <li><a href="/">Go home...</a></li>
                 <% if(isAdmin) { %>
-                <li class="hideOnMobile"><a href="/admin/new-photo">Add Photos</a></li>
+                <li><a href="/admin/new-photo">Add Photos</a></li>
                 <% } %>
             </ul>
         </nav>
@@ -41,22 +41,6 @@
     </div>
 </main>
 <script>
-    const image = document.querySelector('.popup-image');
-const popupContainer = document.createElement('div');
-const popupImage = document.createElement('img');
-
-popupContainer.classList.add('popup-container');
-popupImage.classList.add('popup-image-full');
-
-image.addEventListener('click', () => {
-  popupImage.src = image.src;
-  popupContainer.appendChild(popupImage);
-  document.body.appendChild(popupContainer);
-
-  popupContainer.addEventListener('click', () => {
-    popupContainer.remove();
-  });
-});
 </script>
 </body>
 </html>

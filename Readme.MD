@@ -6,6 +6,9 @@
 
 
 # Pendientes:
--Cambiar el modelo de "photo" por "url"
 -crear correo sólo para esto
--cambiar data vis y juntar con mapas y poner "trayectoria académica" en su lugar para incluir artículos, congresos, etc... 
+-cambiar data vis y juntar con mapas y poner "trayectoria académica" en su lugar para incluir artículos, congresos, etc...
+-cargar trabajos: mapas, gráficos, etc... hacer modelo de mongoose?
+-imágenes con transparencia en los recruados de services
+-cambiar services por "maps and data viz"
+-quizás también See Portfolio por Photo portfolio
