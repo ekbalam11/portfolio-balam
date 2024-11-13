@@ -13,6 +13,7 @@ body {
     margin-top: 50px;
     font-family:'Poppins', sans-serif;
     width: 100%;
+    background-color: var(--black);
 }
 #header{
     width: 100%;
@@ -31,6 +32,11 @@ h2{
     font-size: 2rem;
     font-weight: 400;
     color: darkcyan;
+}
+
+a{
+    margin: 0;
+    padding: 0;
 }
 
 /* ---------------------nav */
@@ -111,7 +117,7 @@ nav li:first-child{
 }
 /* -----------------------------------------main style */
 main{
-    background-color: var(--white);
+    background-color: var(--black);
 }
 
 
@@ -127,20 +133,23 @@ main{
 /* --------------------------------------about mobile */
 #about{
     color: darkgoldenrod;
-    background-color: var(--whiteGray);
-    padding: 1rem;
+    padding: 1rem 0 4rem 0;
     scroll-margin-top: 50px;
     -webkit-scroll-margin-top: 50px;
+    background-color: var(--black);
 }
+
 
 .row{
     display: flex;
     justify-content: space-between;
     flex-wrap:  wrap;
+    color: var(--whiteGray);
+    padding: 0.5rem;
 
 }
 .row h1{
-    color: var(--black);
+    color: var(--whiteGray);
 }
 .about-col-1{
     margin-top: 1rem;
@@ -154,7 +163,7 @@ main{
 .about-col-2{
     width: 100%;
     flex-basis: 60%;
-    color: var(--black);
+    color: var(--whiteGray);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -162,6 +171,8 @@ main{
 .tab-titles{
     display: flex;
     margin: 20px 0 40px;
+    font-weight: 800;
+    align-items: center;
 }
 
 .tab-links{
@@ -208,7 +219,7 @@ main{
 
 
 /* -----------------------my services mobile */
-#services{
+/* #services{
     margin:0 1rem 1rem 1rem;
     padding: 30px 0;
     color: var(--white)
@@ -254,17 +265,6 @@ main{
     margin-bottom: 15px;
 }
 
-.services-list div a{
-    text-decoration: none;
-    color: rgb(176, 176, 176);
-    font-size: 10px;
-    margin-left: 70%;
-    margin-top: 20px;
-    display: inline-block;
-    text-shadow: #fff;
-    text-decoration: underline;
-}
-
 .services-list div:hover{
     background: darkcyan;
     transform: translate(-10px);
@@ -274,6 +274,9 @@ main{
     color: var(--black);
 }
 
+#services > div > div > div:nth-child(2) > p > a {
+    color: var(--white);
+} */
 
 /* --------------------------------my work .hideOnMobile */
 #portfolio{
@@ -359,7 +362,7 @@ main{
 
 /* ----------------------------contact */
 #contact {
-    margin:0 1rem 0 1rem;
+    padding: 1rem;
 }
 .contact-form{
     flex-basis: 80%;
@@ -382,7 +385,7 @@ main{
     text-decoration: none;
     font-size: 30px;
     margin: .5rem;
-    color: var(--black);
+    color: var(--whiteGray);
     display: inline-block;
     transition: transform 01s;
 }
@@ -398,10 +401,10 @@ form input, form textarea{
     width: 100%;
     border: 0;
     outline: none;
-    background: var(--black);
+    background: var(--whiteGray);
     padding: 15px;
     margin: 15px 0;
-    color: var(--white);
+    color: var(--black);
     font-size: 18px;
     border-radius: 6px;
 }
@@ -411,8 +414,8 @@ form input, form textarea{
     width: auto;
     text-align: center;
     padding: 1rem;
-    background: #262626;
-    color: var(--white);
+    background: var(--whiteGray);
+    color: var(--black);
     font-weight: 300;
     margin-top: 20px;
 }
@@ -513,8 +516,9 @@ main{
 
 #about h1{
     grid-column: 1/4;
-    grid-row: 1/2
-    
+    grid-row: 1/2;
+    color:var(--black);
+    padding-bottom: 1rem;
 }
 
 .about-col-2{
@@ -587,7 +591,7 @@ main{
 }
 
 /*---------------services----------------*/
-
+/* 
 #services h1{
     color: var(--white);
 }
@@ -596,11 +600,15 @@ main{
 }
 .services-list div:hover{
     border: none;
-}
+} */
 
 /* ---------------------portfolio */
 #portfolio{
     padding: 1rem 0 3rem 0;
+    background-color: var(--black);
+}
+#portfolio h1{
+    color: var(--whiteGray);
 }
 
 /* -------------------contact */
