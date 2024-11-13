@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>🐆-Balam Castro</title>
+    <%- include('./partials/head.ejs') %>
+</head>
+
+<body>
+    <div id="portfolio-header">
+        <nav id="portfolio-nav-bar">
+            <ul>
+                <li>
+                    <% if(isAdmin) { %>
+                        <a href="/logout" class="button-logout">Logout</a>
+                        <!-- <h1 class="welcome-sign">Hola Balam!</h1> -->
+                        <% } else { %>
+                            <a href="/login">Login</a>
+                            <% } %>
+                </li>
+                <li><a href="/">Go home...</a></li>
+                <% if(isAdmin) { %>
+                    <li><a href="/admin/new-photo">Add Photos</a></li>
+                    <% } %>
+            </ul>
+        </nav>
+    </div>
+    <!-- ---------------------------projects -->
+    <section class="section">
+        <!-- ----------------------scientific papers colabs -->
+        <div class="wrapper">
+            <h1>Designs Gallery</h1>
+            <div class="faq">
+                <button class="accordion">
+                    <h3>Project: Aquatic birds and ARG resistance </h3>
+                    <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                </button>
+                <div class="pannel">
+                    <img src="/design-section/graphical-abstract-art2.png" alt="graphical abstract 1">
+                    <a
+                        href=https://www.researchgate.net/publication/350564311_Faecal_microbiota_and_antibiotic_resistance_genes_in_migratory_waterbirds_with_contrasting_habitat_use">
+                        <p class="bib-source">Jarma, D. et al. (2024) <b>‘Variability of faecal microbiota and antibiotic resistance genes in flocks of migratory gulls and comparison with the surrounding environment’</b>, Environmental Pollution, 359, p. 124563. doi:10.1016/j.envpol.2024.124563.</p>
+                    </a>
+                </div>
+            </div>
+            <div class="faq">
+                <button class="accordion">
+                    <h3>Project: Aquatic birds and ARG resistance 2 </h3>
+                    <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                </button>
+                <div class="pannel">
+                    <img src="/design-section/graphical-abstract.jpg" alt="graphical abstract 2">
+                    <a href=https://www.researchgate.net/publication/382277977_Variability_of_faecal_microbiota_and_antibiotic_resistance_genes_in_flocks_of_migratory_gulls_and_comparison_with_the_surrounding_environment#fullTextFileContent"
+                        target="_blank">
+                        <p class="bib-source">Jarma, Dayana & Sánchez, Marta & Green, Andy & Peralta-Sánchez, Juan & Hortas, Francisco & Sànchez-Melsió, Alexandre & Borrego, Carles. (2021). <b>Faecal microbiota and antibiotic resistance genes in migratory waterbirds with contrasting habitat use. Science of The Total Environment.</b> 783. 146872. 10.1016/j.scitotenv.2021.146872. </p>
+                    </a>
+                </div>
+            </div>
+            <button class="accordion">
+                <h3>Paper: Forest communities and Socioecological Systems </h3>
+                <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+            </button>
+            <div class="pannel">
+                <img src="/design-section/ses-frame.jpg" alt="ses frame">
+                <img src="/design-section/sfm-model.jpg" alt="sfm model">
+                <a href="https://link.springer.com/article/10.1007/s00267-021-01512-8" target="_blank">
+                    <p class="bib-source">de la Mora, G.D.l.M., Sánchez-Nupan, L.O., Castro-Torres, B. et al. <b >Sustainable Community Forest Management in Mexico: An Integrated Model of Three Socio-ecological Frameworks.</b> Environmental Management 68, 900–913 (2021). https://doi.org/10.1007/s00267-021-01512-8</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <script>
+        var acc = document.getElementsByClassName('accordion');
+
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener('click', function () {
+                this.classList.toggle("active");
+                this.parentElement.classList.toggle("active");
+
+                var pannel = this.nextElementSibling;
+
+                if (pannel.style.display === "block") {
+                    pannel.style.display = "none"
+                } else {
+                    pannel.style.display = "block"
+                    console.log("🚀 ~ acc[i].addEventListener ~ pannel:", pannel)
+                }
+            });
+
+        }
+
+    </script>
+</body>
+
+</html>

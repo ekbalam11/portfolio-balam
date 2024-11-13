@@ -11,15 +11,15 @@
         </li>
         <li class="hideOnMobile"><a href="/">Home</a></li>
         <li class="hideOnMobile"><a href="#about">About me</a></li>
-        <li class="hideOnMobile"><a href="#services">Services</a></li>
-        <li><a href="/portfolio">See portfolio</a></li>
+        <li><a href="/data-portfolio">Design</a></li>
+        <li><a href="/portfolio">Photos</a></li>
         <% if(isAdmin) { %>
             <li class="hideOnMobile"><a href="/admin/new-photo">Add Photos</a></li>
             <% } else { %>
                 <li class="hideOnMobile"><a href="#contact">Contact</a></li>
                 <% } %>
                     <!-- <li style="font-weight: 300;">en | es</li>  -->
-                    <li onclick=showSidebar()><a href="#"><svg id="dots" width="75px" height="75px" viewBox="0 0 24 24"
+                    <li id="dots-btn" onclick=showSidebar()><a href="#"><svg id="dots" width="75px" height="75px" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000000" stroke-width="1"
                                 stroke-linecap="round" stroke-linejoin="miter">
                                 <line x1="5.99" y1="12" x2="6" y2="12" stroke-linecap="round" stroke-width="2"></line>
@@ -38,7 +38,7 @@
                 </svg></a></li>
         <li><a href="/">Home</a></li>
         <li><a href="#about">About me</a></li>
-        <li><a href="#services">Services</a></li>
+        <li><a href="/data-portfolio">Maps and more</a></li>
         <li><a href="/portfolio">Portfolio</a></li>
         <% if(isAdmin) { %>
             <li><a href="/admin/new-photo">Add Photos</a></li>

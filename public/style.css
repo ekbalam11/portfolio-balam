@@ -209,7 +209,7 @@ main{
 
 /* -----------------------my services mobile */
 #services{
-    margin:0 1rem 0 1rem;
+    margin:0 1rem 1rem 1rem;
     padding: 30px 0;
     color: var(--white)
 }
@@ -232,14 +232,20 @@ main{
     border-radius: 5%;
 }
 
-.services-list div i{
+.services-list i{
+    color: var(--white);
     font-size: 50px;
     margin-bottom: 30px;
 }
+.text {
+    color: var(--white);
+}
 
 .cita{
+    color: var(--whiteGray);
     font-style: italic;
-    font-weight: bolder
+    font-weight: bolder;
+    text-align: center;
 }
 
 .services-list div h2{
@@ -450,6 +456,9 @@ form input, form textarea{
   /* and (max-device-width: 1900px)  */
   and (-webkit-min-device-pixel-ratio: 1) {
 
+#dots-btn{
+    display: none;
+}
 
 #header{
     width: 100%;

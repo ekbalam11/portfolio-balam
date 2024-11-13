@@ -7,6 +7,10 @@ const getHome = async (req, res) => {
     })
 };
 
+const getDataPortfolio = async (req, res) => {
+    res.render('data-portfolio')
+}
+
 const getPhotos = async (req, res) => {
     const photos = await Photo.find();
     res.render('portfolio', {
@@ -77,6 +81,7 @@ const postMessage = async (req, res) => {
 
 module.exports = {
     getHome,
+    getDataPortfolio,
     getPhotos,
     getPhotoById,
     getCV,

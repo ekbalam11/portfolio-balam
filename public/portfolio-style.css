@@ -1,11 +1,12 @@
 :root {
     --black: rgb(16, 23, 32);
-    --white: rgb(247,252,254);
-    --whiteGray: rgb(220,221,221)
+    --white: rgb(247, 252, 254);
+    --whiteGray: rgb(220, 221, 221)
 }
+
 /* ------------------------header */
 
-#portfolio-header{
+#portfolio-header {
     /* width: 100%;
     height: 100vh;
     background-image: url(../img/self.jpg);
@@ -13,16 +14,17 @@
     background-position: bottom; */
 }
 
-#portfolio-logo{
+#portfolio-logo {
     display: none;
 }
 
-#portfolio-nav-bar ul{
+#portfolio-nav-bar ul {
     width: 100%;
     position: fixed;
 }
+
 /* ------------------------portfolio */
-.gallery{
+.gallery {
     padding: 3rem;
     background-color: var(--black);
     color: var(--whiteGray);
@@ -30,11 +32,12 @@
     flex-direction: column;
 }
 
-.photo-article img{
+.photo-article img {
     width: 100%;
     height: auto;
 }
-.photo-info{
+
+.photo-info {
     padding: .5rem 0 .5rem 0;
     position: relative;
     bottom: auto;
@@ -43,30 +46,97 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-.photo-info h3{
+.photo-info h3 {
     color: var(--white);
     text-transform: uppercase;
     font-weight: 800;
 }
 
 
+/* ---------------------design gallery */
 
 
-
-@media screen 
-  and (min-device-width: 813px) 
-  /* and (max-device-width: 1900px)  */
-  and (-webkit-min-device-pixel-ratio: 1){
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Adjust 300px as needed */
-    grid-gap: 20px;
-
+.wrapper {
+    max-width: 85%;
+    margin: auto;
 }
-.gallery img{
-    height: 300px;
-    object-fit: cover;
+.wrapper > p, 
+.wrapper > h1 {
+    margin: 1.5rem 0;
+    margin-top: 5rem;
+    text-align: center;
 }
+.wrapper > h1 {
+    letter-spacing: 3px;
+}
+.accordion {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 2rem 2.5rem;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+.accordion i{
+    font-size: 1.6rem;
+}
+.active, 
+.accordion:hover{
+    background-color: gainsboro;
+} 
+.pannel p{
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+.pannel{
+    padding: 0 2rem 2.5rem 2rem;
+    background-color: white;
+    overflow: hidden;
+    display: none;
+    border: 2px solid var(--whiteGray);
+}
+.pannel > img{
+    width: 100%;
+    margin-top: 1.5rem;
+}
+.pannel .bib-source{
+    font-size: 0.5rem;
+}
+.faq.active{
+    border: none;
+}
+
+
+
+@media screen and (min-device-width: 813px)
+/* and (max-device-width: 1900px)  */
+and (-webkit-min-device-pixel-ratio: 1) {
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        /* Adjust 300px as needed */
+        grid-gap: 20px;
+
+    }
+
+    .gallery img {
+        height: 300px;
+        object-fit: cover;
+    }
+
+    /* ---------------------design gallery */
+
+    .pannel .bib-source{
+        font-size: 0.75rem;
+    }
 
 }

@@ -11,4 +11,4 @@
 -cargar trabajos: mapas, gráficos, etc... hacer modelo de mongoose?
 -imágenes con transparencia en los recruados de services
 -cambiar services por "maps and data viz"
--quizás también See Portfolio por Photo portfolio
+-Div: Academic production como pop-up

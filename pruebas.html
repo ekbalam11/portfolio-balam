@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="section">
+        <div class="wrapper">
+            <p>This is a paragraph</p>
+            <h1>Header h1</h1>
+            <div class="faq">
+                <button class="accordion">
+                    Title1
+                    <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                </button>
+                <div class="pannel">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum praesentium vel aperiam
+                        dignissimos distinctio ullam alias tenetur quam eos temporibus voluptatem saepe eveniet libero,
+                        excepturi deserunt fugit repellat eum reprehenderit!</p>
+                </div>
+            </div>
+            <div class="faq">
+                <button class="accordion">
+                    Title2
+                    <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                </button>
+                <div class="pannel">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum praesentium vel aperiam
+                        dignissimos distinctio ullam alias tenetur quam eos temporibus voluptatem saepe eveniet libero,
+                        excepturi deserunt fugit repellat eum reprehenderit!</p>
+                </div>
+            </div>
+            <div class="faq">
+                <button class="accordion">
+                    Title3
+                    <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                </button>
+                <div class="pannel">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum praesentium vel aperiam
+                        dignissimos distinctio ullam alias tenetur quam eos temporibus voluptatem saepe eveniet libero,
+                        excepturi deserunt fugit repellat eum reprehenderit!</p>
+                </div>
+            </div>
+            <!--  <div class="collapsible">
+                    <input type="checkbox" id="collapsible-head">
+                <label for="collapsible-head">Design in scientific paper</label>
+                <div class="collapsible-info">
+                    <h3>Header</h3>
+                    <img src="design-section/graphical-abstract.jpg" alt="Graphical Abstract 1">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi in quas dolorem voluptatem! Id quam fugit officia consequatur maiores animi iste? Ullam facere numquam omnis ea nemo saepe dolor nostrum!</p>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="collapsible">
+                    <input type="checkbox" id="collapsible-head">
+                <label for="collapsible-head">Design in scientific paper</label>
+                <div class="collapsible-info">
+                    <h2>Header</h2>
+                    <img src="design-section/graphical-abstract.jpg" alt="Graphical Abstract 1">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi in quas dolorem voluptatem! Id quam fugit officia consequatur maiores animi iste? Ullam facere numquam omnis ea nemo saepe dolor nostrum!</p>
+                </div>
+            </div>  -->
+        </div>
+        <script>
+            var acc = document.getElementsByClassName('accordion');
+
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener('click', function () {
+                    this.classList.toggle("active");
+                    this.parentElement.classList.toggle("active");
+
+                    var pannel = this.nextElementSibling;
+
+                    if (pannel.style.display === "block") {
+                        pannel.style.display = "none"
+                    } else {
+                        pannel.style.display = "block"
+                        console.log("🚀 ~ acc[i].addEventListener ~ pannel:", pannel)
+                    }
+                });
+
+            }
+
+        </script>
+    </section>
+</body>
+
+</html>
