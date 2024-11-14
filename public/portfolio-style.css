@@ -6,13 +6,13 @@
 
 /* ------------------------header */
 
-#portfolio-header {
-    /* width: 100%;
+/* #portfolio-header {
+    width: 100%;
     height: 100vh;
     background-image: url(../img/self.jpg);
     background-size: cover;
-    background-position: bottom; */
-}
+    background-position: bottom;
+} */
 
 #portfolio-logo {
     display: none;
@@ -57,7 +57,7 @@
 
 
 .wrapper {
-    max-width: 85%;
+    max-width: 95%;
     margin: auto;
 }
 .wrapper > p, 
@@ -75,7 +75,7 @@
     cursor: pointer;
     font-size: 1.2rem;
     width: 100%;
-    padding: 2rem 2.5rem;
+    padding: 1rem 1.5rem;
     border: none;
     outline: none;
     transition: 0.4s;
@@ -87,10 +87,28 @@
 .accordion i{
     font-size: 1.6rem;
 }
+.accordion-titles{
+    display: flex;
+    padding-right: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.accordion-titles h2{
+    font-size: 1rem;
+}
+.accordion-titles h3{
+    padding-bottom: 1rem;
+    font-size: 1.25rem;
+}
+.accordion-titles h4{
+    font-size: 0.9rem;
+    font-weight: 400;
+}
 .active, 
 .accordion:hover{
     background-color: gainsboro;
 } 
+
 .pannel p{
     color: rgba(0, 0, 0, 0.7);
     font-size: 1.2rem;
@@ -109,7 +127,12 @@
 }
 .pannel .bib-source{
     font-size: 0.5rem;
+    padding-top: 2rem;
 }
+.pannel .bib-source:hover{
+    text-decoration: underline;
+}
+
 .faq.active{
     border: none;
 }
@@ -135,8 +158,35 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
     /* ---------------------design gallery */
 
+    .wrapper {
+        max-width: 85%;
+        margin: auto;
+    }
+    .accordion{
+        padding: 2rem 2.5rem;
+    }
+    .accordion-titles{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .accordion h2{
+        text-align: left;
+        font-size: 2rem;
+        padding-bottom: 0.5rem;
+    }
+    .accordion h3{
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+    .accordion h4{
+        font-weight: 400;
+        font-size: 1rem;
+    }
+
     .pannel .bib-source{
         font-size: 0.75rem;
     }
+
 
 }
