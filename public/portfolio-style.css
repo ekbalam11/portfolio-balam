@@ -26,6 +26,7 @@
 /* ------------------------portfolio */
 .gallery {
     padding: 3rem;
+    margin-top: 50px;
     background-color: var(--black);
     color: var(--whiteGray);
     display: flex;
@@ -139,6 +140,7 @@
 
 
 
+
 @media screen and (min-device-width: 813px)
 /* and (max-device-width: 1900px)  */
 and (-webkit-min-device-pixel-ratio: 1) {
@@ -188,5 +190,33 @@ and (-webkit-min-device-pixel-ratio: 1) {
         font-size: 0.75rem;
     }
 
+
+
+/* -------------------photo */
+.gallery:hover img
+ {
+    -webkit-filter: blur(13px);
+     -moz-filter: blur(13px);
+     -o-filter: blur(13px);
+     -ms-filter: blur(13px);
+     filter: blur(3px);  
+     opacity: .65;
+   
+ }
+ 
+ .gallery:hover img:hover
+ {
+    -webkit-filter: blur(0px);
+     -moz-filter: blur(0px);
+     -o-filter: blur(0px);
+     -ms-filter: blur(0px);
+     filter: blur(0px);  
+     opacity: 1;
+ }
+ 
+ 
+ body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleBox {
+    margin-bottom: 0;
+ }
 
 }
