@@ -45,6 +45,7 @@
     text-align: center;
     background-color: rgba(16, 23, 32, 0.5);
     font-family: 'Open Sans', sans-serif;
+    display: none;
 }
 
 .photo-info h3 {
@@ -212,6 +213,9 @@ and (-webkit-min-device-pixel-ratio: 1) {
      -ms-filter: blur(0px);
      filter: blur(0px);  
      opacity: 1;
+/* 
+     position: absolute; */
+     z-index: 999;
  }
  
  

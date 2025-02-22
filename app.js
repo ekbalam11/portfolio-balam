@@ -5,7 +5,7 @@ const session = require('express-session')
 dotenv.config();
 
 //public routes
-const indexRoutes = require('./routes/index.router')
+const indexRoutes = require('./routes/index.routes')
 //admin routes
 const adminRoutes = require('./routes/admin.routes')
 //auth routes
