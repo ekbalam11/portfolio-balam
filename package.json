@@ -1,13 +1,12 @@
 {
   "name": "portfolio-balam",
   "version": "1.0.0",
-  "main": "api/index.js",
+  "main": "build/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js",
-    "start": "node index.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "dev": "nodemon --watch src --ext ts,js --ignore build --exec \"npm run build && node build/server.js\"",
+    "build": "tsc",
+    "start": "node build/server.js"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +23,12 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "gh-pages": "^6.2.0"
+    "@types/ejs": "^3.1.5",
+    "@types/express": "^5.0.6",
+    "@types/express-session": "^1.19.0",
+    "@types/node": "^26.4.1",
+    "@types/nodemailer": "^8.0.1",
+    "gh-pages": "^6.2.0",
+    "typescript": "^7.0.2"
   }
 }
