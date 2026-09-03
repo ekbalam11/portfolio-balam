@@ -32,11 +32,17 @@ export const getPhotos = async (
     req: Request,
     res: Response
 ): Promise<void> => {
+    console.log('A. getPhotos iniciado');
+
     const photos = await Photo.find();
+
+    console.log('B. Photo.find terminado:', photos.length);
 
     res.render('portfolio', {
         photos
     });
+
+    console.log('C. portfolio renderizado');
 };
 
 export const getPhotoById = async (
