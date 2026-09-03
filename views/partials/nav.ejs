@@ -2,7 +2,7 @@
 
     <ul>
         <li class="hideOnMobile">
-            <% if(isAdmin) { %>
+            <% if(locals.isAdmin) { %>
                 <a href="/logout" class="button-logout">Logout</a>
 
                 <% } else { %>
@@ -13,7 +13,7 @@
         <li class="hideOnMobile"><a href="#about">About me</a></li>
         <li><a href="/data-portfolio">Design</a></li>
         <li><a href="/portfolio">Photos</a></li>
-        <% if(isAdmin) { %>
+        <% if(locals.isAdmin) { %>
             <li class="hideOnMobile"><a href="/admin/new-photo">Add Photos</a></li>
             <% } else { %>
                 <li class="hideOnMobile"><a href="#contact">Contact</a></li>

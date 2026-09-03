@@ -1,29 +1,37 @@
 const Photo = require('../models/portfolioPhotos.model');
 
-const getHome = async(req, res) => {
+const getHome = async (req, res) => {
     res.render('home', {
     })
 };
 
-const getPhotos = async(req, res) => {
+const getPhotos = async (req, res) => {
     const photo = await Photo.find();
     res.render('portfolio', {
-        photo    
+        photo
     })
 };
 
 const getNewPhotoForm = async (req, res) => {
-    const { idPhoto } =req.params;
+    const { idPhoto } = req.query;
+
+    if (!idPhoto) {
+        return res.render('new-photo', {
+            url: {}
+        })
+    }
+
     const url = await Photo.findById(idPhoto);
+
     res.render('new-photo', {
-        url: {}
+        url : url || {}
     })
 };
 
-const postNewPhoto = async(req, res) => {
+const postNewPhoto = async (req, res) => {
     const { id, latitude, longitude } = req.body;
     console.log("🚀 ~ postNewPhoto ~ req.body:", req.body)
-    if(id) {
+    if (id) {
         await Photo.findByIdAndUpdate(id, req.body);
         res.send('Foto modificada');
         return

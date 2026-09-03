@@ -29,7 +29,7 @@ const getPhotoById = async (req, res) => {
 };
 
 const getCV = async (req, res) => {
-    const filePath = path.join(__dirname, '..', 'public', 'resources', 'BalamCastroCV2024.pdf');
+    const filePath = path.join(__dirname, '..', '..', 'public', 'resources', 'BalamCastroCV2024.pdf');
 
     res.download(filePath, 'BalamCastroCV2024.pdf', (err) => {
         if (err) {

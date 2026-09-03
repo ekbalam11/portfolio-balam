@@ -5,7 +5,7 @@ const indexControllers = require('../controllers/index.controller');
 const adminControllers = require('../controllers/admin.controller');
 
 router.use((req, res, next) => {
-    res.locals.isDamin = true;
+    res.locals.isAdmin = true;
     next()
 });
 
